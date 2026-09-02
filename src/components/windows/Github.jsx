@@ -1,4 +1,3 @@
-import React from 'react'
 import githubData from "../../assets/github.json"
 import MacWindow from './MacWindow'
 import "./github.scss"
@@ -22,12 +21,15 @@ const GitCard = ({ data = { id: 1, image: "", title: "", description: "", tags: 
         </div>
     </div>
 }
-const Github = ({ windowName, setWindowState }) => {
+const Github = ({ windowName, setWindowState, minimized, onMinimize, onFocus }) => {
     return (
         <MacWindow
             windowName={windowName}
             
             setWindowState={setWindowState}
+            onMinimize={onMinimize}
+            onFocus={onFocus}
+            minimized={minimized}
         >
             <div className="cards">
                 {githubData.map(project => {

@@ -1,7 +1,9 @@
 .window{
     
   height:100%;
-    background-color: black;
+    background:rgba(15,17,21,.92);
+    border:1px solid rgba(255,255,255,.2);
+    box-shadow:0 24px 55px rgba(0,0,0,.48);
     border-radius:0.75rem;
     overflow: hidden;
     color: white;
@@ -9,7 +11,9 @@
     font-weight: 500;
     .nav{
         padding-inline:0.75rem;
-        padding-block:0.5rem;
+            padding-block:0.5rem;
+            background:rgba(35,38,43,.84);
+            backdrop-filter:blur(18px);
         border-bottom:1px solid rgba(245, 245, 245, 0.361);
         display:flex;
         gap: 1.5rem;
@@ -26,7 +30,9 @@
         .red{
             background-color:rgb(152, 4, 4);
             cursor: pointer;
+            transition:filter .15s, transform .15s;
         }
+        .dot:hover{filter:brightness(1.25);transform:scale(1.12)}
         .yellow{
             background-color: rgb(209, 209, 70);
         }

@@ -5,21 +5,30 @@
     bottom:1rem;
     left:50%;
     transform:translateX(-50%);
-    background-color:rgba(63,63,63,0.395);
+    background-color:rgba(30,34,42,0.54);
     padding-inline:1rem;
     padding-block:0.75rem;
     border-radius:0.75rem;
     backdrop-filter:blur(5px);
-   width: fit-content;
+    width: fit-content;
+    z-index:1000;
+    border:1px solid rgba(255,255,255,.18);
+    box-shadow:0 10px 35px rgba(0,0,0,.3);
    
-    .icon{
+    .dock-icon{
+        position:relative;
+        border:0;
+        color:white;
+        font-size:27px;
+        cursor:pointer;
         padding:0.65rem;
         border-radius:0.5rem;
         display:flex;
         align-items:center;
         justify-content:center;
         aspect-ratio:1/1;
-        transition:all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+        transition:all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+        will-change:transform;
     }
     .github,.cli{
         background-color:black;
@@ -44,13 +53,9 @@
         background:linear-gradient(to bottom,rgb(137, 6, 6),rgb(124, 7, 7));
     }
    
-    .icon:hover{
-        transform:scale(1.5) translateY(-20%);
-    }
-    .icon:hover + .icon,
-    .icon:has(+.icon:hover){
-        transform:scale(1.1) translateY(-9%)
-    }
+    .dock-tooltip { position:absolute; bottom:calc(100% + 13px); left:50%; transform:translateX(-50%); white-space:nowrap; padding:5px 8px; border-radius:5px; opacity:0; pointer-events:none; background:#20242b; font:500 11px -apple-system,BlinkMacSystemFont,sans-serif; transition:opacity .2s; }
+    .dock-icon:hover .dock-tooltip { opacity:1; }
+    .dock-icon.is-active::after { content:''; position:absolute; left:50%; bottom:-7px; width:4px; height:4px; transform:translateX(-50%); border-radius:50%; background:#fff; }
 
 
 }
@@ -58,3 +63,4 @@
 .dock i {
     color: white;
 }
+@media(max-width:600px){.dock{bottom:8px;gap:3px;padding:7px 8px;max-width:calc(100vw - 14px)}.dock .dock-icon{padding:.48rem;font-size:21px}.dock-icon:hover{transform:scale(1.2) translateY(-8px)!important}.dock-tooltip{display:none}}

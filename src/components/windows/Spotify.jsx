@@ -1,12 +1,14 @@
-import React from 'react'
 import MacWindow from './MacWindow'
 import "./spotify.scss"
 
-const Spotify = ({ windowName, setWindowState }) => {
+const Spotify = ({ windowName, setWindowState, minimized, onMinimize, onFocus }) => {
   return (
     <MacWindow
       windowName={windowName}
       setWindowState={setWindowState}
+      onMinimize={onMinimize}
+      onFocus={onFocus}
+      minimized={minimized}
       width="25vw"
     >
       <div className="spotify-window">

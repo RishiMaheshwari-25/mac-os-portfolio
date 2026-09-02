@@ -1,10 +1,6 @@
-import React from 'react'
 import './dock.scss'
-import Note from './windows/Note'
-import { resume } from 'react-dom/server'
-import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
-const Doc = ({windowState,setWindowState}) => {
+const Doc = ({setWindowState}) => {
   return (
     <footer className="dock">
         <div  onClick={()=>{setWindowState(state=>({...state,github:true}))}}className="icon github" ><i className="ri-github-fill"></i></div>

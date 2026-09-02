@@ -1,9 +1,8 @@
-import React from 'react'
 import MacWindow from './MacWindow'
 import Terminal from 'react-console-emulator'
 import './cli.scss'
 
-const Cli = ({ windowName, setWindowState }) => {
+const Cli = ({ windowName, setWindowState, minimized, onMinimize, onFocus }) => {
   const welcomeMessage = `
 ╔════════════════════════════════════════════════════════════════╗
 ║                                                                ║
@@ -172,7 +171,10 @@ a friendly chat about web development.`;
   return (
     <MacWindow windowName={windowName}
             
-            setWindowState={setWindowState}>
+            setWindowState={setWindowState}
+            onMinimize={onMinimize}
+            onFocus={onFocus}
+            minimized={minimized}>
       <div className="cli-window">
         <Terminal.default
           commands={commands}

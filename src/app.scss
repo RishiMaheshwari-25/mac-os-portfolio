@@ -10,13 +10,11 @@ html,body,#root{
 main{
     height:100%;
     width:100%;
- background-image: url('https://images.unsplash.com/photo-1739750269459-da6b1ee46475?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-background-repeat:no-repeat;
-background-size:cover;
-background-position:center;
 position:relative;
 overflow:hidden;
+isolation:isolate;
 }
 body{
     background-color:black;
 }
+.boot-screen { position:absolute; inset:0; z-index:3000; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:24px; background:#050505; color:#fff; font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif; }.boot-screen>i{font-size:64px}.boot-progress{width:180px;height:5px;border-radius:9px;background:#343434;overflow:hidden}.boot-progress span{display:block;height:100%;border-radius:9px;background:#f5f5f5}.boot-screen small{color:#818181;letter-spacing:.3px}
