@@ -1,7 +1,9 @@
 # React + Vite
-
-https://github.com/RishiMaheshwari-25/mac-os-portfolio/issues/2#issue-5326476659
-
+<video
+  src="https://github.com/user-attachments/assets/869519ca-2b6a-43fe-8f6a-618be621e4b9"
+  controls
+  width="800">
+</video>
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
